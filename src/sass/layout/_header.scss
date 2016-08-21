@@ -10,21 +10,23 @@
 //     HEADER STYLES
 // ----------------------------
 
-.jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0;
-  background-color: #fff;
-}
+.ak_header {
+	@extend .jumbotron;
+	padding-top: 6rem;
+  	padding-bottom: 6rem;
+  	margin-bottom: 0;
+  	background-color: #fff;
 
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
+	div {
+		@extend .container;
+		max-width: 60rem;
 
-.jumbotron-heading {
-  font-weight: 300;
-}
+		h1 {
+			@extend .display-3;
+		}
+	}
 
-.jumbotron .container {
-  max-width: 40rem;
+  	p:last-child {
+  		margin-bottom: 0;	
+  	}
 }

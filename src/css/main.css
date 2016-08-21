@@ -566,7 +566,7 @@ h6, .h6 {
   font-weight: 300;
 }
 
-.display-3 {
+.display-3, .ak_header div h1 {
   font-size: 4.5rem;
   font-weight: 300;
 }
@@ -745,39 +745,39 @@ pre code {
   overflow-y: scroll;
 }
 
-.container {
+.container, .ak_header div, footer div {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container::after {
+.container::after, .ak_header div::after, footer div::after {
   content: "";
   display: table;
   clear: both;
 }
 
 @media (min-width: 544px) {
-  .container {
+  .container, .ak_header div, footer div {
     max-width: 576px;
   }
 }
 
 @media (min-width: 768px) {
-  .container {
+  .container, .ak_header div, footer div {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container {
+  .container, .ak_header div, footer div {
     max-width: 940px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container {
+  .container, .ak_header div, footer div {
     max-width: 1140px;
   }
 }
@@ -4364,7 +4364,7 @@ input[type="button"].btn-block {
   border-top-right-radius: 0.2rem;
 }
 
-.jumbotron {
+.jumbotron, .ak_header {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #eceeef;
@@ -4372,7 +4372,7 @@ input[type="button"].btn-block {
 }
 
 @media (min-width: 544px) {
-  .jumbotron {
+  .jumbotron, .ak_header {
     padding: 4rem 2rem;
   }
 }
@@ -5607,7 +5607,7 @@ button.close {
 /* --------------------------------------------------------
    Utility classes
    -------------------------------------------------------- */
-.bg-inverse {
+.bg-inverse, footer {
   background-color: #373a3c;
 }
 
@@ -6113,7 +6113,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-style: italic;
 }
 
-.text-muted {
+.text-muted, footer {
   color: #818a91 !important;
 }
 
@@ -6265,7 +6265,7 @@ a.text-danger:focus, a.text-danger:hover {
   }
 }
 
-.bg-inverse {
+.bg-inverse, footer {
   background-color: #373a3c;
 }
 
@@ -6753,7 +6753,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-style: italic;
 }
 
-.text-muted {
+.text-muted, footer {
   color: #818a91 !important;
 }
 
@@ -6912,16 +6912,16 @@ a.text-danger:focus, a.text-danger:hover {
   margin-bottom: 0;
 }
 
+.navbar-collapse h4 {
+  color: #818a91;
+}
+
 .navbar-collapse .container-fluid {
   padding: 2rem 2.5rem;
   border-bottom: 1px solid #55595c;
 }
 
-.navbar-collapse h4 {
-  color: #818a91;
-}
-
-.navbar-collapse .text-muted {
+.navbar-collapse .text-muted, .navbar-collapse footer {
   color: #818a91;
 }
 
@@ -6931,42 +6931,43 @@ a.text-danger:focus, a.text-danger:hover {
   margin-right: 3rem;
 }
 
-.social {
+.ak_lib_list {
   float: left;
-  max-width: 30rem;
   margin-right: 3rem;
 }
 
-.social a {
+.ak_lib_list ul {
+  float: left;
+  margin-right: 3rem;
+}
+
+.ak_lib_list a {
   font-weight: 500;
   color: #eceeef;
 }
 
-.social a:hover {
-  color: #fff;
+.ak_lib_list a:hover {
+  color: #818a91;
+  text-decoration: none;
 }
 
 #map {
   height: 300px;
 }
 
-.jumbotron {
+.ak_header {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
 }
 
-.jumbotron p:last-child {
+.ak_header div {
+  max-width: 60rem;
+}
+
+.ak_header p:last-child {
   margin-bottom: 0;
-}
-
-.jumbotron-heading {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
 }
 
 footer {
