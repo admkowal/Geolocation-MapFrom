@@ -1,22 +1,15 @@
 // -------------------------------
-//     FOOTER VARIABLES
+//     NAV VARIABLES
 // -------------------------------
 
     // *--------- TYPOGRAPHY ---------*
 
-    $footer-padding: 3rem;
-
     // *--------- COLORS ---------*
 
 // ----------------------------
-//     FOOTER STYLES
+//     NAV STYLES
 // ----------------------------
 
-footer {
-  padding-top: $footer-padding;
-  padding-bottom: $footer-padding;
-
-  	p {
-  		margin-bottom: .25rem;	
-  	}
+#map {
+	height: 300px;
 }
