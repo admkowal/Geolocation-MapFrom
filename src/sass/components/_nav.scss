@@ -10,48 +10,49 @@
 //     NAV STYLES
 // ----------------------------
 
-
-
-.navbar {
-	margin-bottom: 0;
-}
-
 .navbar-collapse {
-	h4 {
-		color: #818a91;
-	}
+
 	.container-fluid {
 		padding: 2rem 2.5rem;
 		border-bottom: 1px solid #55595c;
 	}
-
-	.text-muted {
-  		color: #818a91;
-  	}
 }
 
 .about {
 	float: left;
   	max-width: 30rem;
   	margin-right: 3rem;
+
+  	h4 {
+  		color: #373a3c;
+  	}
+
+  	&__text {
+  		@extend .text-muted;
+  	}
 }
 
-.ak_lib_list {
+.submenu {
 	float: left;
   	margin-right: 3rem;
 
-  	ul {
+  	h4 {
+  		color: #373a3c;
+  	}
+
+  	&__list {
+  		@extend .list-unstyled;
+
   		float: left;
 		margin-right: 3rem;
-  	}
 
-  	a {
-  		font-weight: 500;
-  		color: #eceeef;
-  	}
+		a {
+  			color: #818a91;
 
-  	a:hover {
-  		color: #818a91;
-  		text-decoration: none;	
+  			&:hover {
+  				color: #373a3c;
+  				text-decoration: none;
+  			}
+  		}
   	}
 }

@@ -12,7 +12,7 @@
 //     FOOTER STYLES
 // ----------------------------
 
-footer {
+.footer {
 	@extend .text-muted, .bg-inverse;
 
 	padding-top: $footer-padding;
@@ -22,7 +22,7 @@ footer {
 		@extend .container;
 	}
 
-  	p {
+  	&__text {
   		margin-bottom: .25rem;	
   	}
 }

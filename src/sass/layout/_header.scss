@@ -10,8 +10,9 @@
 //     HEADER STYLES
 // ----------------------------
 
-.ak_header {
+.head {
 	@extend .jumbotron;
+
 	padding-top: 6rem;
   	padding-bottom: 6rem;
   	margin-bottom: 0;
@@ -19,11 +20,13 @@
 
 	div {
 		@extend .container;
+		
 		max-width: 60rem;
+	}
 
-		h1 {
-			@extend .display-3;
-		}
+	&__headline {
+		@extend .display-3;
+	
 	}
 
   	p:last-child {
