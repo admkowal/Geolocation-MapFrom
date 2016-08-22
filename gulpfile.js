@@ -10,9 +10,19 @@ var gulp = require("gulp"),
     imagemin = require("gulp-imagemin"),
     runSequence = require("run-sequence"),
     ftp = require("vinyl-ftp"),
-    argv = require("yargs").argv;
+    argv = require("yargs").argv,
+    babel = require("gulp-babel"),
     gutil = require("gulp-util");
 
+gulp.task("babelify", function () {
+
+    return gulp.src("src/js/src/*.js")
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest("src/js"));
+
+});
 
 gulp.task("css", function() {
 
@@ -42,7 +52,8 @@ gulp.task("server", function() {
 gulp.task("watch", function() {
 
     gulp.watch("src/sass/**/*.scss", ["css"]);
-    gulp.watch(["src/*.html", "src/**/*.js"], browserSync.reload);
+    gulp.watch(["src/js/src/*.js"], ['babelify']);
+    gulp.watch(["src/*.html", "src/js/*.js"], browserSync.reload);
 
 });
 
