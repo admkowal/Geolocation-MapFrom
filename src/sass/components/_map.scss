@@ -10,6 +10,25 @@
 //     NAV STYLES
 // ----------------------------
 
-.map {
+.map-wrapper {
+	@extend .container;
 	height: 20rem;
+}
+
+#map {
+	height: 10rem;
+	width: 100%;
+}
+
+
+.map-form {
+	@extend .form-inline;
+
+	&__address {
+		@extend .form-group;
+	}
+
+	&__output {
+		@extend .form-control;
+	}
 }

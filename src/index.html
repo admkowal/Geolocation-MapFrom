@@ -52,11 +52,26 @@
     <header class="head">
         <div>
             <h1 class="head__headline">Geolocation mapFrom</h1>
-            <p>Create map directions from the place you are now. The app is using Goosgle Maps API.</p>
+            <p>Create map directions from the place you are now. The app is using Google Maps API.</p>
         </div>
     </header>
 
-    <main class="map" id="map" role=”main”>
+    <main class="map-wrapper" role="main">
+
+        <div id="map"></div>
+
+        <form class="map-form" id="mapForm">
+            <div class="map-form__address">
+                <output class="map-form__output">Your Location</output>
+            </div>
+
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Find Location
+            </button>
+            <i class="fa fa-camera-retro fa-lg"></i>
+
+        </form>
+
     </main>
 
     <footer class="footer">

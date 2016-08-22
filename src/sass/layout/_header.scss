@@ -20,13 +20,10 @@
 
 	div {
 		@extend .container;
-		
-		max-width: 60rem;
 	}
 
 	&__headline {
 		@extend .display-3;
-	
 	}
 
   	p:last-child {
