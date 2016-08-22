@@ -118,4 +118,4 @@ gulp.task("build:server", ["build"], function() {
 
 });
 
-gulp.task("default", ["css", "server", "watch"]);
+gulp.task("default", ["css", "babelify", "server", "watch"]);

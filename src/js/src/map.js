@@ -1,28 +1,37 @@
-(function() {
+"use-strict";
 
-"use strict";	
+class Map {
 
-let findMap = (function(...args) {
+	constructor(options = {}) {
 
-	return {
+		if(!options.location) return;
 
-		init: function(options) {
+		this.options = options;
+		this.location = this.options.location;
 
-			if(!options.location) return;
-
-			console.log(options.location);
-
-		}
+		this.createMap();
 
 	}
 
-})();
+	createMap() {
 
-findMap.init({
-	location: "52.230954, 21.006361"
-});		
+		let loc = this.location.split(","),
+			map = new google.maps.Map(document.getElementById('map'), {
+          		center: {lat: parseInt(loc[0]), lng: parseInt(loc[1])},
+          		zoom: 7
+        	});
+	}
+}
 
-})();
+
+function createMap() {
+
+	let newMap = new Map({
+		location: "52.230954, 21.006361"
+	});
+
+}
+
 
 
 

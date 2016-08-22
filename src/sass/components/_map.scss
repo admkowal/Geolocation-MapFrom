@@ -12,12 +12,12 @@
 
 .map-wrapper {
 	@extend .container;
-	height: 20rem;
 }
 
 #map {
-	height: 10rem;
+	height: 15rem;
 	width: 100%;
+	margin: 2rem 0;
 }
 
 

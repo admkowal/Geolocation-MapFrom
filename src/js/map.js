@@ -1,24 +1,42 @@
 "use strict";
+"use-strict";
 
-(function () {
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	"use strict";
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var findMap = function () {
+var Map = function () {
+	function Map() {
+		var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
-		return {
+		_classCallCheck(this, Map);
 
-			init: function init(options) {
+		if (!options.location) return;
 
-				if (!options.location) return;
+		this.options = options;
+		this.location = this.options.location;
 
-				console.log(options.location);
-			}
+		this.createMap();
+	}
 
-		};
-	}();
+	_createClass(Map, [{
+		key: "createMap",
+		value: function createMap() {
 
-	findMap.init({
+			var loc = this.location.split(","),
+			    map = new google.maps.Map(document.getElementById('map'), {
+				center: { lat: parseInt(loc[0]), lng: parseInt(loc[1]) },
+				zoom: 7
+			});
+		}
+	}]);
+
+	return Map;
+}();
+
+function createMap() {
+
+	var newMap = new Map({
 		location: "52.230954, 21.006361"
 	});
-})();
+}
