@@ -746,39 +746,39 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, .map-wrapper, .head div, .footer div {
+.container, .map-wrapper, .footer div {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.container::after, .map-wrapper::after, .head div::after, .footer div::after {
+.container::after, .map-wrapper::after, .footer div::after {
   content: "";
   display: table;
   clear: both;
 }
 
 @media (min-width: 544px) {
-  .container, .map-wrapper, .head div, .footer div {
+  .container, .map-wrapper, .footer div {
     max-width: 576px;
   }
 }
 
 @media (min-width: 768px) {
-  .container, .map-wrapper, .head div, .footer div {
+  .container, .map-wrapper, .footer div {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .container, .map-wrapper, .head div, .footer div {
+  .container, .map-wrapper, .footer div {
     max-width: 940px;
   }
 }
 
 @media (min-width: 1200px) {
-  .container, .map-wrapper, .head div, .footer div {
+  .container, .map-wrapper, .footer div {
     max-width: 1140px;
   }
 }
@@ -9821,14 +9821,21 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 #map {
-  height: 15rem;
+  height: 20rem;
   width: 100%;
   margin: 2rem 0;
 }
 
+.map-form {
+  padding-bottom: 2rem;
+}
+
+.alert {
+  margin-top: 2rem;
+}
+
 .head {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding: 3rem 0 0 0;
   margin-bottom: 0;
   background-color: #fff;
 }
@@ -9844,4 +9851,8 @@ a.text-danger:focus, a.text-danger:hover {
 
 .footer__text {
   margin-bottom: .25rem;
+}
+
+.hidden {
+  display: none;
 }

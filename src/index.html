@@ -50,26 +50,31 @@
     </div>
 
     <header class="head">
-        <div>
+        <div class="container">
             <h1 class="head__headline">Geolocation mapFrom</h1>
-            <p>Create map directions from the place you are now. The app is using Google Maps API.</p>
+            <p>Create map directions from the place you are now. The app is using Google Maps API. This is object oriented app built with ES6 classes constructor pattern design.</p>
+
+            <div class="github-widget" data-repo="admkowal/Geolocation-MapFrom"></div>
         </div>
     </header>
 
     <main class="map-wrapper" role="main">
 
+        <div class="alert hidden" role="alert" id="alert">
+        </div>
+
         <div id="map"></div>
 
         <form class="map-form" id="mapForm">
             <div class="map-form__address">
-                <output class="map-form__output" disabled>Your Location</output>
+                <output class="map-form__output" id="formOutput" disabled>Your Location</output>
             </div>
 
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-info" id="findPos">
                 <i class="fa fa-map-marker" aria-hidden="true"></i> Find Location
             </button>
 
-            <button type="button" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
                 <i class="fa fa-location-arrow" aria-hidden="true"></i> Show Route
             </button>
         </form>
@@ -85,7 +90,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf3GnjUCWrapZb2ibCPxcPpahTCfkTzHI&callback=createMap"
+    <script type="text/javascript" src="js/jquery.githubRepoWidget.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf3GnjUCWrapZb2ibCPxcPpahTCfkTzHI&callback=init"
     async defer></script>
 
     <!-- build:js js/scripts.min.js -->
