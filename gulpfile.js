@@ -84,7 +84,7 @@ gulp.task("images", function() {
 
 gulp.task("copy", function() {
 
-    return gulp.src(["src/css/**/*.css", "src/images/*", "src/uploads/*"], {
+    return gulp.src(["src/css/**/*.css", "src/images/*", "src/uploads/*", "src/fonts/*"], {
         base: "src"
     })
     .pipe(gulp.dest("dist/"));
